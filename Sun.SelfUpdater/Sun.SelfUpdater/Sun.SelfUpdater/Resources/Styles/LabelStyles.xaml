@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Set Default style for labels-->
+    <Style TargetType="Label" x:Key="LblTitle">
+        <Setter Property="Foreground" Value="{StaticResource ContentTitleBrush}" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="LblContent">
+        <Setter Property="Foreground" Value="{StaticResource ContentForegroundBrush}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+    
+    <Style TargetType="Label" x:Key="LblError">
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="LblFooter">
+        <Setter Property="Foreground" Value="{StaticResource LabelForegroundBrush}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+</ResourceDictionary>

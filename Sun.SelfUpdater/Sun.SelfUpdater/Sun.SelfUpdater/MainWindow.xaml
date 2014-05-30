@@ -1,0 +1,28 @@
+﻿<Window x:Class="Sun.SelfUpdater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800" Style="{StaticResource SunWindow}">
+    <DockPanel>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Style="{StaticResource LblFooter}" Content="{Binding UpdaterVersion}" />
+            <Label Grid.Column="2" Style="{StaticResource LblFooter}">
+                <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://systemsunitednavy.com">© Systems United Navy</Hyperlink>
+            </Label>
+        </Grid>
+        <DockPanel>
+            <Label DockPanel.Dock="Top" Name="LblTitle" Style="{StaticResource LblTitle}" />
+            <Label DockPanel.Dock="Top" Style="{StaticResource LblContent}">Update status</Label>
+            <ProgressBar DockPanel.Dock="Top" Name="CtlProgress" IsIndeterminate="True" HorizontalAlignment="Stretch" Maximum="1" Minimum="0" Height="30" />
+            <Label DockPanel.Dock="Top" Style="{StaticResource LblContent}" Name="LblStatus" />
+            <Label DockPanel.Dock="Top" Style="{StaticResource LblError}" Name="LblError" />
+            <GroupBox DockPanel.Dock="Top" VerticalAlignment="Stretch" Margin="0 20 0 0">
+                <RichTextBox Name="TbxStatus" Style="{StaticResource TbxBlockStyle}" />
+            </GroupBox>
+        </DockPanel>
+    </DockPanel>
+</Window>

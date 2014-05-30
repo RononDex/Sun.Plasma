@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Define Images-->    
+    <BitmapImage x:Key="ScBackgroundImage" UriSource="/Resources/Images/LightBackground.jpg" />
+
+    <BitmapImage x:Key="SunLogoDark" UriSource="/Resources/Images/SunLogoDark.png" />
+
+    <!-- ************************************************************
+            Define Colors    
+         ************************************************************ -->
+    <Color x:Key="BorderColor">Black</Color>
+    <Color x:Key="BorderLightColor">#BBBBBB</Color>
+    
+    <Color x:Key="ContentBackgroundColor">#DDDDDD</Color>
+    <Color x:Key="TextButtonColor">Black</Color>
+    <Color x:Key="ContentForegroundColor">#111111</Color>
+    <Color x:Key="ContentTitleColor">Black</Color>
+    <Color x:Key="TextBoxColor">Black</Color>
+    
+    <Color x:Key="LabelForegroundColor">Black</Color>
+
+    <!-- ************************************************************
+            Define Brushes    
+         ************************************************************ -->
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}" />
+    <SolidColorBrush x:Key="BorderLightBrush" Color="{StaticResource BorderLightColor}" />
+    
+    <!--Button Brushes-->
+    <SolidColorBrush x:Key="ButtonTextBrush" Color="{StaticResource ButtonTextColor}" />
+    <SolidColorBrush x:Key="TextButtonBrush" Color="{StaticResource TextButtonColor}" />
+    <SolidColorBrush x:Key="ButtonTextHighlightBrush" Color="{StaticResource ButtonTextHighlightColor}" />
+    <SolidColorBrush x:Key="ButtonSmallBackgroundBrush" Color="{StaticResource ButtonSmallBackgroundColor}" />
+
+    <SolidColorBrush x:Key="TextBoxBrush" Color="{StaticResource TextBoxColor}" />
+
+    <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource ContentBackgroundColor}" Opacity="0.6" />
+    <SolidColorBrush x:Key="ContentForegroundBrush" Color="{StaticResource ContentForegroundColor}" />
+    <SolidColorBrush x:Key="ContentTitleBrush" Color="{StaticResource ContentTitleColor}" />
+
+    <SolidColorBrush x:Key="LabelForegroundBrush" Color="{StaticResource LabelForegroundColor}" />
+
+    <Style TargetType="Control">
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+</ResourceDictionary>
