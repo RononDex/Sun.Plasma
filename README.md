@@ -8,7 +8,9 @@ Projects in this repository
 
 ### Sun.Plasma 
 A fleet wide management tool that all memebers of SUN have access to. It features a wide range of features that make communication and management of the fleet easier.
-  
+
+PLASMA stands for: Publication of Logistics And Servicemen Main Assigments
+
 This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI stuff.
 
 ---
