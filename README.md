@@ -29,5 +29,5 @@ This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI st
 
 How can I contribute?
 --------
-Nice, I am always searching for some guys that can help me out or even fix bugs, give constructive feedback on the code.
+I am always searching for some guys that can help me out or even fix bugs, give constructive feedback on the code.
 You can contact me in the SUN forums with your github user account name and I will add you.
