@@ -7,7 +7,7 @@ Projects in this repository
 --------
 
 ### Sun.Plasma 
-A fleet wide management tool that all memebers of SUN have access to. It features a wide range of features that make communication and management of the fleet easier.
+A fleet wide management tool that all members of SUN have access to. It features a wide range of features that make communication and management of the fleet easier.
 
 PLASMA stands for: Publication of Logistics And Servicemen Main Assigments
 
