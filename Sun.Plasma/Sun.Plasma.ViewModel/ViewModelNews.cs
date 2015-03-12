@@ -44,7 +44,7 @@ namespace Sun.Plasma.ViewModel
             }
 
             var reader = new Core.Feeds.RssNewsFeedReader();
-            this.NewsFeeds = reader.GetNewsFeeds(url);
+            this.NewsFeeds = reader.GetNewsFeeds(url).OrderByDescending(x => x.PublishDate).Take(10);
         }
     }
 }

@@ -23,7 +23,7 @@
     
     <!--Button Colors-->
     <Color x:Key="ButtonTextColor">Black</Color>
-    <Color x:Key="ButtonTextHighlightColor">#0000AA</Color>
+    <Color x:Key="ButtonTextHighlightColor">#0000BB</Color>
     <Color x:Key="ButtonSmallBackgroundColor">White</Color>
 
     <Color x:Key="ContentBackgroundColor">#DDDDDD</Color>

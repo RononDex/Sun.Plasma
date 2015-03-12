@@ -14,7 +14,10 @@
             <StackPanel Grid.Column="2" Orientation="Horizontal">
                 <Label Style="{StaticResource LblFooter}" Content="{Binding ApplicationVersion}" />
                 <Label Style="{StaticResource LblFooter}">
-                    <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://systemsunitednavy.com">© Systems United Navy</Hyperlink>
+                    ©
+                </Label>
+                <Label Style="{StaticResource LblFooter}">
+                    <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://systemsunitednavy.com">Systems United Navy</Hyperlink>
                 </Label>
             </StackPanel>
         </Grid>
@@ -28,7 +31,7 @@
                     <Button Content="Squadron" Style="{StaticResource TextButton}" />
                     <Button Content="Logistics" Style="{StaticResource TextButton}" />
                     <Button Content="Account" Style="{StaticResource TextButton}" />
-                    <Button Content="Info" Style="{StaticResource TextButton}" Click="ShowInfoControl_Click" />
+                    <Button Content="About" Style="{StaticResource TextButton}" Click="ShowInfoControl_Click" />
                     <Button Content="Exit" Style="{StaticResource TextButton}" Command="{Binding ExitCommand}" />
                 </StackPanel>
             </StackPanel>

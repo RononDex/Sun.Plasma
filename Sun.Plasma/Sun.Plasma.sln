@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Plasma", "Sun.Plasma\Sun.Plasma.csproj", "{3293A2FB-5CA9-4343-91CB-35DBDA448F91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Plasma.ViewModel", "Sun.Plasma.ViewModel\Sun.Plasma.ViewModel.csproj", "{7AD39374-CA63-4352-8458-90587D237EF0}"
@@ -11,38 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.SelfUpdater", "..\Sun.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Plasma.WebInstaller", "Sun.Plasma.WebInstaller\Sun.Plasma.WebInstaller.csproj", "{CDF3B494-0651-4BBF-A354-EF42000C525C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.StartAsAdmin", "..\Sun.StartAsAdmin\Sun.StartAsAdmin\Sun.StartAsAdmin.csproj", "{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.WebPublishing", "..\Sun.Core\Sun.WebPublishing\Sun.WebPublishing\Sun.WebPublishing.csproj", "{BD58B89A-2336-4AD1-9503-1C65F3A14082}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://theuberger.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Sun.Plasma\\Sun.Plasma.csproj
-		SccProjectName1 = Sun.Plasma
-		SccLocalPath1 = Sun.Plasma
-		SccProjectUniqueName2 = Sun.Plasma.ViewModel\\Sun.Plasma.ViewModel.csproj
-		SccProjectName2 = Sun.Plasma.ViewModel
-		SccLocalPath2 = Sun.Plasma.ViewModel
-		SccProjectUniqueName3 = ..\\Sun.Core\\Sun.Core\\Sun.Core.csproj
-		SccProjectName3 = ../Sun.Core/Sun.Core
-		SccLocalPath3 = ..\\Sun.Core\\Sun.Core
-		SccProjectUniqueName4 = ..\\Sun.SelfUpdater\\Sun.SelfUpdater\\Sun.SelfUpdater\\Sun.SelfUpdater.csproj
-		SccProjectName4 = ../Sun.SelfUpdater/Sun.SelfUpdater/Sun.SelfUpdater
-		SccLocalPath4 = ..\\Sun.SelfUpdater\\Sun.SelfUpdater\\Sun.SelfUpdater
-		SccProjectUniqueName5 = Sun.Plasma.WebInstaller\\Sun.Plasma.WebInstaller.csproj
-		SccProjectName5 = Sun.Plasma.WebInstaller
-		SccLocalPath5 = Sun.Plasma.WebInstaller
-		SccProjectUniqueName6 = ..\\Sun.StartAsAdmin\\Sun.StartAsAdmin\\Sun.StartAsAdmin.csproj
-		SccProjectName6 = ../Sun.StartAsAdmin/Sun.StartAsAdmin
-		SccLocalPath6 = ..\\Sun.StartAsAdmin\\Sun.StartAsAdmin
-		SccProjectUniqueName7 = ..\\Sun.Core\\Sun.WebPublishing\\Sun.WebPublishing\\Sun.WebPublishing.csproj
-		SccProjectName7 = ../Sun.Core/Sun.WebPublishing/Sun.WebPublishing
-		SccLocalPath7 = ..\\Sun.Core\\Sun.WebPublishing\\Sun.WebPublishing
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -102,16 +75,6 @@ Global
 		{CDF3B494-0651-4BBF-A354-EF42000C525C}.Release|Mixed Platforms.Build.0 = Release|x86
 		{CDF3B494-0651-4BBF-A354-EF42000C525C}.Release|x86.ActiveCfg = Release|x86
 		{CDF3B494-0651-4BBF-A354-EF42000C525C}.Release|x86.Build.0 = Release|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Debug|x86.ActiveCfg = Debug|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Debug|x86.Build.0 = Debug|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Release|Any CPU.ActiveCfg = Release|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Release|Mixed Platforms.Build.0 = Release|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Release|x86.ActiveCfg = Release|x86
-		{1EC2ABD1-630C-496A-A2F3-2FEBA71CC6EF}.Release|x86.Build.0 = Release|x86
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
