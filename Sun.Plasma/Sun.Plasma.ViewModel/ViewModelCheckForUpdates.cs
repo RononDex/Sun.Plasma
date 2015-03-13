@@ -38,6 +38,7 @@ namespace Sun.Plasma.ViewModel
         private void CheckForUpdatesEntryPoint()
         {
             #if DEBUG
+            this.UpdateAvailable = false;
             return;
             #endif
 
