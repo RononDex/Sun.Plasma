@@ -37,6 +37,10 @@ namespace Sun.Plasma.ViewModel
 
         private void CheckForUpdatesEntryPoint()
         {
+            #if DEBUG
+            return;
+            #endif
+
             var updater = new SelfUpdater();
 
             var selfUpdaterVersion = AssemblyName.GetAssemblyName(Path.Combine(new string[]

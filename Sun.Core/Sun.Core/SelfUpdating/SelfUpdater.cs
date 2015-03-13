@@ -150,6 +150,10 @@ namespace Sun.Core.SelfUpdating
         /// <returns></returns>
         public bool CheckForUpdates(string applicationName, string rootUrl, Version currentVersion)
         {
+            #if DEBUG
+            return false;
+            #endif
+
             CoreTools.Logger.DebugFormat("Checking for updates for application \"{0}\"", applicationName);
             var onlineApp = this.GetApplication(applicationName, rootUrl);
 
