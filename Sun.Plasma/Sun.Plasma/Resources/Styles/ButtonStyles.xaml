@@ -29,7 +29,7 @@
     <Style TargetType="Button" x:Key="CloseButton" BasedOn="{StaticResource HeaderButton}">
         <Setter Property="Content">
             <Setter.Value>
-                <Image Source="{StaticResource CloseIcon}" Width="20" Height="20" />
+                <Image Source="{StaticResource CloseIcon}" Width="12" Height="12" />
             </Setter.Value>
         </Setter>
         <Setter Property="Command" Value="{Binding CloseCommand}" />
@@ -37,7 +37,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Button.Content">
                     <Setter.Value>
-                        <Image Source="{StaticResource CloseIconHover}" Width="20" Height="20" />
+                        <Image Source="{StaticResource CloseIconHover}" Width="12" Height="12" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -48,7 +48,7 @@
     <Style TargetType="Button" x:Key="MinimizeButton" BasedOn="{StaticResource HeaderButton}">
         <Setter Property="Content">
             <Setter.Value>
-                <Image Source="{StaticResource MinimizeIcon}" Width="20" Height="20" />
+                <Image Source="{StaticResource MinimizeIcon}" Width="12" Height="12" />
             </Setter.Value>
         </Setter>
         <Setter Property="Command" Value="{Binding MinimizeCommand}" />
@@ -56,7 +56,7 @@
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Button.Content">
                     <Setter.Value>
-                        <Image Source="{StaticResource MinimizeIconHover}" Width="20" Height="20" />
+                        <Image Source="{StaticResource MinimizeIconHover}" Width="12" Height="12" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
