@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{BD58B89A-2336-4AD1-9503-1C65F3A14082}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sun.WebPublishing</RootNamespace>
     <AssemblyName>Sun.WebPublishing</AssemblyName>
@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Sun.WebPublishing.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Renci.SshNet, Version=2013.4.7.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -48,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="WebPublisher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

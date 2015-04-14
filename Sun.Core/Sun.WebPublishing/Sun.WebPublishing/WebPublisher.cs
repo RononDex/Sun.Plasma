@@ -20,13 +20,13 @@ namespace Sun.WebPublishing
         /// </summary>
         /// <param name="app"></param>
         /// <param name="localPath">The path to the local .exe file of the application</param>
-        public void InitialUpload(string appName, string localPath, List<string> bugFixes, List<string> newStuff, string ftpServer, string ftpUser, SecureString ftpPassword, string pathToAppsFolder)
+        public void InitialUpload(string appName, string localPath, List<string> bugFixes, List<string> newStuff, string ftpServer, string ftpUser, string privateKeyFile, string privateKeyPassPhrase, string pathToAppsFolder)
         {
             var app = new Application();
             app.ApplicationVersion = new Version();
             app.Name = appName;
 
-            PublishApplication(app, localPath, bugFixes, newStuff, new List<string>(), ftpServer, ftpUser, ftpPassword, pathToAppsFolder);
+            PublishApplication(app, localPath, bugFixes, newStuff, new List<string>(), ftpServer, ftpUser, privateKeyFile, privateKeyPassPhrase, pathToAppsFolder);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Sun.WebPublishing
         /// </summary>
         /// <param name="app"></param>
         /// <param name="localPath">The path to the local .exe file of the application</param>
-        public void PublishApplication(Application app, string localPath, List<string> bugFixes, List<string> newStuff, List<string> deletedFiles, string ftpServer, string ftpUser, SecureString ftpPassword, string pathToAppsFolder)
+        public void PublishApplication(Application app, string localPath, List<string> bugFixes, List<string> newStuff, List<string> deletedFiles, string ftpServer, string ftpUser, string privateKeyFile, string privateKeyPassPhrase, string pathToAppsFolder)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace Sun.WebPublishing
                 app.PublishingStatus = "Connecting to SFTP server";
 
                 // Open SFTP connection to server
-                using (var ftpClient = new SftpClient(ftpServer, ftpUser, SecureStringUtility.SecureStringToString(ftpPassword)))
+                using (var ftpClient = new SftpClient(ftpServer, ftpUser, new PrivateKeyFile(privateKeyFile, privateKeyPassPhrase)))
                 {
                     ftpClient.Connect();
 
