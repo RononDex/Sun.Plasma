@@ -2,3 +2,4 @@
 
 New stuff:
  - Updated from .Net Framework v4.0 to .Net Framework v4.5
+ - New option on login screen to automatically launch application on windows startup

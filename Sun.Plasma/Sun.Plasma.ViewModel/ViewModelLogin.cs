@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Input;
 using System.Security;
 using System.IO;
+using Sun.Core;
 using Sun.Core.Security;
 
 namespace Sun.Plasma.ViewModel
@@ -16,11 +18,14 @@ namespace Sun.Plasma.ViewModel
 
         public ViewModelLogin()
         {
+            // Check if the user has stored his credentials using "Rememeber me"
             if (File.Exists(CREDENTIAL_FILE))
             {                
                 SecureStorage.RestorePerUserCredentials(out _userName, out _password, CREDENTIAL_FILE);
                 this.RememberMe = true;
             }
+
+            LaunchOnStartup = ApplicationTools.IsAppRegisteredToLaunchOnStartUp("Sun.Plasma");
         }
 
         public ICommand CloseCommand
@@ -54,6 +59,13 @@ namespace Sun.Plasma.ViewModel
             set { this._rememberMe = value; OnPropertyChanged("RememberMe"); }
         }
 
+        private bool _launchOnStartup;
+        public bool LaunchOnStartup
+        {
+            get { return _launchOnStartup; }
+            set { _launchOnStartup = value; OnPropertyChanged("LaunchOnStartup"); }
+        }
+
         private string _errorMsg = string.Empty;
         /// <summary>
         /// The error message that gets displayed on the screen
@@ -68,6 +80,11 @@ namespace Sun.Plasma.ViewModel
             }
         }
 
+        /// <summary>
+        /// Do the login validation and log in the user if successfull
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool Login(SecureString password)
         {
             this.Password = password;
@@ -80,6 +97,8 @@ namespace Sun.Plasma.ViewModel
                 if (File.Exists(CREDENTIAL_FILE))
                     File.Delete(CREDENTIAL_FILE);
             }
+
+            ApplicationTools.SetAppRegisteredToLaunchOnStartup("Sun.Plasma", LaunchOnStartup, Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Sun.Plasma.exe"));
 
             if (UserName == "test" 
                 && Sun.Core.Security.SecureStringUtility.SecureStringToString(password) == "test")

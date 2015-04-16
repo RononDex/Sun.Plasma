@@ -64,6 +64,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationTools.cs" />
     <Compile Include="CoreTools.cs" />
     <Compile Include="Feeds\NewsFeedReader.cs" />
     <Compile Include="Feeds\NewsFeedEntry.cs" />
