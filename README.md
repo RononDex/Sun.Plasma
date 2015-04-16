@@ -18,7 +18,7 @@ This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI st
 ### Sun.SelfUpdater
 A tool used for updating the SUN application. It checks for updates for a given application and updates it if a new version is available.
 
-This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI stuff.
+This projects is coded in C# using the .NET Framework 4.5 and WPF for the GUI stuff.
 
 ---
 
