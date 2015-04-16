@@ -118,6 +118,18 @@ namespace Sun.Plasma
             ChangeContent(controlName);
         }
 
+        private void ButtonBase_Click(object sender, RoutedEventArgs e)
+        {
+            string controlName = "LinksControl";
+
+            if (PlasmaTools.ControlsCache[controlName] == null)
+                PlasmaTools.ControlsCache[controlName] = new Controls.Links();
+
+            ChangeContent(controlName);
+        }
+
         #endregion
+
+
     }
 }

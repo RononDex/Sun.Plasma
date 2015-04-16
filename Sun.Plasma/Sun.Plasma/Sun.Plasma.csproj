@@ -102,6 +102,9 @@
     <Compile Include="CheckForUpdates.xaml.cs">
       <DependentUpon>CheckForUpdates.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Links.xaml.cs">
+      <DependentUpon>Links.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ViewNews.xaml.cs">
       <DependentUpon>ViewNews.xaml</DependentUpon>
     </Compile>
@@ -119,6 +122,10 @@
       <DependentUpon>UpdateSelfUpdater.xaml</DependentUpon>
     </Compile>
     <Page Include="CheckForUpdates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Links.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
