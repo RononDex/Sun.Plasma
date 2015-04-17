@@ -118,12 +118,53 @@ namespace Sun.Plasma
             ChangeContent(controlName);
         }
 
-        private void ButtonBase_Click(object sender, RoutedEventArgs e)
+        private void ShowFleetResources_Click(object sender, RoutedEventArgs e)
         {
-            string controlName = "LinksControl";
+            string controlName = "FleetResourcesControl";
 
             if (PlasmaTools.ControlsCache[controlName] == null)
-                PlasmaTools.ControlsCache[controlName] = new Controls.Links();
+                PlasmaTools.ControlsCache[controlName] = new Controls.ViewFleetResources();
+
+            ChangeContent(controlName);
+        }
+
+
+        private void ShowMissionManagement_Click(object sender, RoutedEventArgs e)
+        {
+            string controlName = "MissionManagementControl";
+
+            if (PlasmaTools.ControlsCache[controlName] == null)
+                PlasmaTools.ControlsCache[controlName] = new Controls.ViewMissionManagement();
+
+            ChangeContent(controlName);
+        }
+
+        private void ShowSquadron_Click(object sender, RoutedEventArgs e)
+        {
+            string controlName = "SquadronControl";
+
+            if (PlasmaTools.ControlsCache[controlName] == null)
+                PlasmaTools.ControlsCache[controlName] = new Controls.ViewSquadron();
+
+            ChangeContent(controlName);
+        }
+
+        private void ShowLogistics_Click(object sender, RoutedEventArgs e)
+        {
+            string controlName = "LogisticsControl";
+
+            if (PlasmaTools.ControlsCache[controlName] == null)
+                PlasmaTools.ControlsCache[controlName] = new Controls.ViewLogistics();
+
+            ChangeContent(controlName);
+        }
+
+        private void ShowAccount_Click(object sender, RoutedEventArgs e)
+        {
+             string controlName = "AccountControl";
+
+            if (PlasmaTools.ControlsCache[controlName] == null)
+                PlasmaTools.ControlsCache[controlName] = new Controls.ViewAccount();
 
             ChangeContent(controlName);
         }

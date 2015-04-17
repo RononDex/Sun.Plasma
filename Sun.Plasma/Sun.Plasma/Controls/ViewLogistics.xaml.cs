@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Sun.Plasma.Controls
 {
     /// <summary>
-    /// Interaction logic for Lin_ks.xaml
+    /// Interaction logic for ViewLogistics.xaml
     /// </summary>
-    public partial class Links : UserControl
+    public partial class ViewLogistics : UserControl
     {
-        public Links()
+        public ViewLogistics()
         {
             InitializeComponent();
         }

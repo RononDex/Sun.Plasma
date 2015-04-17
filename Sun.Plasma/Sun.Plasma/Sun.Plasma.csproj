@@ -102,8 +102,14 @@
     <Compile Include="CheckForUpdates.xaml.cs">
       <DependentUpon>CheckForUpdates.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Links.xaml.cs">
-      <DependentUpon>Links.xaml</DependentUpon>
+    <Compile Include="Controls\ViewFleetResources.xaml.cs">
+      <DependentUpon>ViewFleetResources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewLogistics.xaml.cs">
+      <DependentUpon>ViewLogistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewMissionManagement.xaml.cs">
+      <DependentUpon>ViewMissionManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ViewNews.xaml.cs">
       <DependentUpon>ViewNews.xaml</DependentUpon>
@@ -113,6 +119,9 @@
     </Compile>
     <Compile Include="Controls\ViewApplicationInfo.xaml.cs">
       <DependentUpon>ViewApplicationInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewSquadron.xaml.cs">
+      <DependentUpon>ViewSquadron.xaml</DependentUpon>
     </Compile>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="ResizableWindow.cs" />
@@ -125,7 +134,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Links.xaml">
+    <Page Include="Controls\ViewFleetResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewLogistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewMissionManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\ViewApplicationInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewSquadron.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
