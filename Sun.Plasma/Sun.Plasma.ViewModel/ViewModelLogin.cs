@@ -13,7 +13,7 @@ namespace Sun.Plasma.ViewModel
 {
     public class ViewModelLogin : ViewModelBase
     {
-        readonly string CREDENTIAL_FILE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SUNLogin.blob");
+        readonly string CREDENTIAL_FILE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SystemsUnitedNavy", "SUNLogin.blob");
 
 
         public ViewModelLogin()
