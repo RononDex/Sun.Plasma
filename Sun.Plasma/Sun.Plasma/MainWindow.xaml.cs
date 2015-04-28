@@ -120,12 +120,7 @@ namespace Sun.Plasma
 
         private void ShowFleetResources_Click(object sender, RoutedEventArgs e)
         {
-            string controlName = "FleetResourcesControl";
-
-            if (PlasmaTools.ControlsCache[controlName] == null)
-                PlasmaTools.ControlsCache[controlName] = new Controls.ViewFleetResources();
-
-            ChangeContent(controlName);
+            Process.Start("https://www.systemsunitednavy.com/forums/service_resources/");
         }
 
 

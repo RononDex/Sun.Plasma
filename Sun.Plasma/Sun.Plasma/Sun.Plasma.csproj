@@ -102,9 +102,6 @@
     <Compile Include="CheckForUpdates.xaml.cs">
       <DependentUpon>CheckForUpdates.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ViewFleetResources.xaml.cs">
-      <DependentUpon>ViewFleetResources.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\ViewLogistics.xaml.cs">
       <DependentUpon>ViewLogistics.xaml</DependentUpon>
     </Compile>
@@ -131,10 +128,6 @@
       <DependentUpon>UpdateSelfUpdater.xaml</DependentUpon>
     </Compile>
     <Page Include="CheckForUpdates.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ViewFleetResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
