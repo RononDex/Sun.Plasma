@@ -1,10 +1,12 @@
 ﻿Bugfixes:
  - Network related stuff (for example loading news feed) now also works when you are behind a proxy
+ - AppData files (logfiles, SunLogin.blob) now get stored correctly in their own subfolder instead of directly in %APPDATA%
 
 New stuff:
  - Updated from .Net Framework v4.0 to .Net Framework v4.5
  - New option on login screen to automatically launch application on windows startup
  - Added "Coming Soon" screens to menu entries that are not implemented yet.
+ - Added "Fleet Resources" menu item, that opens browsers with the fleet resources
  
  Projects to publish:
   - Sun.Plasma

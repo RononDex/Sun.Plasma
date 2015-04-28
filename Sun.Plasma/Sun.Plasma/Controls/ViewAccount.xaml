@@ -6,6 +6,29 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <Label Style="{StaticResource LblTitle}">Coming Soon</Label>
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Account data">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                        <RowDefinition Height="30px"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200px"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0">User Name:</Label>
+                    <Label Grid.Row="0" Grid.Column="1">RononDex</Label>
+
+                    <Label Grid.Row="1" Grid.Column="0">Rank:</Label>
+                    <Label Grid.Row="1" Grid.Column="1">OF-1</Label>
+
+                    <Label Grid.Row="2" Grid.Column="0">Functional Group:</Label>
+                    <Label Grid.Row="2" Grid.Column="1">Combat Support Group EU-2 (AS-EU-2)</Label>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
     </DockPanel>
 </UserControl>

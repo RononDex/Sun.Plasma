@@ -30,7 +30,7 @@
                     <Button Content="Missions" Style="{StaticResource TextButton}" Click="ShowMissionManagement_Click" />
                     <Button Content="Squadron" Style="{StaticResource TextButton}" Click="ShowSquadron_Click" />
                     <Button Content="Logistics" Style="{StaticResource TextButton}" Click="ShowLogistics_Click" />
-                    <Button Content="Account" Style="{StaticResource TextButton}" Click="ShowAccount_Click" />
+                    <Button Content="My Account" Style="{StaticResource TextButton}" Click="ShowAccount_Click" />
                     <Button Content="Fleet Resources" Style="{StaticResource TextButton}" Click="ShowFleetResources_Click" />
                     <Button Content="About" Style="{StaticResource TextButton}" Click="ShowInfoControl_Click" />
                     <Button Content="Exit" Style="{StaticResource TextButton}" Command="{Binding ExitCommand}" />

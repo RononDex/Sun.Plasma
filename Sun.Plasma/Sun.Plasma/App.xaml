@@ -16,6 +16,7 @@
                 <ResourceDictionary Source="/Resources/Styles/TextBoxStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/ProgressBarStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/ListViewStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/TabControlStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
