@@ -4,6 +4,7 @@
     <Style TargetType="Label">
         <Setter Property="Foreground" Value="{StaticResource ContentTitleBrush}" />
         <Setter Property="FontSize" Value="14" />
+        <Setter Property="Height" Value="35"></Setter>
     </Style>
 
     <Style TargetType="Label" x:Key="SmallTitle">

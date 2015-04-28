@@ -14,7 +14,7 @@
     
     <BitmapImage x:Key="SunLogo" UriSource="/Resources/Images/SunLogo.png" />
     <BitmapImage x:Key="SunLogoDark" UriSource="/Resources/Images/PlasmaLogo.png" />
-    
+
     <!-- ************************************************************
             Define Colors    
          ************************************************************ -->
@@ -31,6 +31,7 @@
     <Color x:Key="ContentForegroundColor">#111111</Color>
     <Color x:Key="ContentTitleColor">Black</Color>
     <Color x:Key="TextBoxColor">Black</Color>
+    <Color x:Key="TextBoxBackColor">White</Color>
     
     <Color x:Key="LabelForegroundColor">Black</Color>
 
@@ -47,6 +48,7 @@
     <SolidColorBrush x:Key="ButtonSmallBackgroundBrush" Color="{StaticResource ButtonSmallBackgroundColor}" />
 
     <SolidColorBrush x:Key="TextBoxBrush" Color="{StaticResource TextBoxColor}" />
+    <SolidColorBrush x:Key="TextBoxBackBrush" Color="{StaticResource TextBoxBackColor}" />
 
     <SolidColorBrush x:Key="ContentBackgroundBrush" Color="{StaticResource ContentBackgroundColor}" Opacity="0.6" />
     <SolidColorBrush x:Key="ContentForegroundBrush" Color="{StaticResource ContentForegroundColor}" />
@@ -58,3 +60,4 @@
         <Setter Property="FontSize" Value="14" />
     </Style>
 </ResourceDictionary>
+    

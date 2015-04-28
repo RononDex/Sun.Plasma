@@ -3,14 +3,15 @@
 
     <!--Set default style of groupbox-->
     <Style TargetType="GroupBox">
+        <Setter Property="Margin" Value="0, 10, 0, 0"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="GroupBox">
                     <Border CornerRadius="4" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource ContentBackgroundBrush}">
                         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                             <StackPanel Orientation="Vertical">
-                                <Label Content="{TemplateBinding Header}" Style="{StaticResource SmallTitle}"></Label>
-                                <ContentPresenter Margin="10" RecognizesAccessKey="True" />
+                                <Label Content="{TemplateBinding Header}" Margin="5,5,0,0" Style="{StaticResource SmallTitle}"></Label>
+                                <ContentPresenter Margin="10, 5, 10, 10" RecognizesAccessKey="True" />
                             </StackPanel>
                         </ScrollViewer>
                     </Border>

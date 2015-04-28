@@ -17,6 +17,7 @@
                 <ResourceDictionary Source="/Resources/Styles/ProgressBarStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/ListViewStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ComboBoxStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

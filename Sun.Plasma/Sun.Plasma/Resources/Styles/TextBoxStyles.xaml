@@ -8,7 +8,7 @@
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Control">
-                    <Border BorderThickness="1" BorderBrush="{StaticResource BorderBrush}">
+                    <Border BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource TextBoxBackBrush}">
                         <ScrollViewer Margin="5 1 0 0" Foreground="{StaticResource ContentForegroundBrush}" x:Name="PART_ContentHost" />
                     </Border>
                 </ControlTemplate>
