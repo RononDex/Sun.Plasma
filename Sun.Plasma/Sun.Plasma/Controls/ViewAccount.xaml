@@ -31,18 +31,22 @@
                 </Grid>
             </GroupBox>
             <GroupBox Header="Manage your ships">
-                <ListView>
-                    <ListViewItem>
-                        <StackPanel Orientation="Horizontal">
-                            <ComboBox Width="150px" SelectedIndex="0">
-                                <ComboBoxItem>Constellation</ComboBoxItem>
-                                <ComboBoxItem>Hornet</ComboBoxItem>
-                                <ComboBoxItem>...</ComboBoxItem>
-                            </ComboBox>
-                            <TextBox Margin="10, 0, 0, 0" Width="200" Style="{StaticResource TextBoxStyle}">Prometheus</TextBox>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
+                <StackPanel Orientation="Vertical">
+                    <ListView>
+                        <ListViewItem>
+
+                        </ListViewItem>
+                    </ListView>
+                    <StackPanel Orientation="Horizontal">
+                        <ComboBox Width="150px" SelectedIndex="0">
+                            <ComboBoxItem>Constellation</ComboBoxItem>
+                            <ComboBoxItem>Hornet</ComboBoxItem>
+                            <ComboBoxItem>...</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Margin="10, 0, 0, 0" Width="200" Style="{StaticResource TextBoxStyle}">Prometheus</TextBox>
+                        <Button>Add</Button>
+                    </StackPanel>
+                </StackPanel>
             </GroupBox>
         </StackPanel>
     </DockPanel>
