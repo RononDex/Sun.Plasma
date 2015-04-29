@@ -5,6 +5,7 @@ using System.Text;
 using System.Security;
 using System.Security.Cryptography;
 using System.IO;
+using Microsoft.Win32;
 
 namespace Sun.Core.Security
 {
@@ -15,21 +16,31 @@ namespace Sun.Core.Security
     public static class SecureStorage
     {
         /// <summary>
-        /// This key is used to encrypt / decrypt the secure data
-        /// 16 bytes give a 128-bit key
-        /// </summary>
-        private static readonly byte[] EncryptionKey = new byte[] { 125, 0, 27, 75, 200, 52, 10, 255, 6, 58, 22, 66, 159, 124, 165, 210 };
-
-        /// <summary>
         /// This function stores user credentials using the Windows Data Protection API
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
         public static void StorePerUserCredentials(string userName, SecureString password, string fileName)
         {
+            // Generate additional entropy (will be used as the Initialization vector)
+            // This is basically the (2048-bit) encryption key used to encrypt the credentials
+            // The encryption key changes everytime the credentials get stored for increased security (everytime someone logs in with "Remember Me" ticked)
+            byte[] entropy = new byte[256];
+            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(entropy);
+            }
+
+            var currentUserRegistry = Registry.CurrentUser.OpenSubKey("Software\\SystemsUnitedNavy", true);
+            if (currentUserRegistry == null)
+                currentUserRegistry = Registry.CurrentUser.CreateSubKey("Software\\SystemsUnitedNavy", RegistryKeyPermissionCheck.Default);
+
+            currentUserRegistry.SetValue("SecureCredentialsStorageEntropy", entropy);
+
+
             var data = ProtectedData.Protect(StringToByteArray(string.Format("{0};#{1}",
                 userName, SecureStringUtility.SecureStringToString(password))),
-                EncryptionKey, 
+                entropy,
                 DataProtectionScope.CurrentUser);
 
             File.WriteAllBytes(fileName, data);
@@ -45,7 +56,14 @@ namespace Sun.Core.Security
             userName = null;
             password = null;
 
-            var decryptedData = ProtectedData.Unprotect(File.ReadAllBytes(fileName), EncryptionKey, DataProtectionScope.CurrentUser);
+            // Read the encryption key from the registry
+            var sunKey = Registry.CurrentUser.OpenSubKey("Software\\SystemsUnitedNavy");
+            if (sunKey == null) // If no encryption key exists, return no credentials as we can't decrypt the credentials files in this case
+                return;
+
+            var entropy = sunKey.GetValue("SecureCredentialsStorageEntropy");
+
+            var decryptedData = ProtectedData.Unprotect(File.ReadAllBytes(fileName), (byte[])entropy, DataProtectionScope.CurrentUser);
             string credentials = ByteArrayToString(decryptedData);
             var splitted = credentials.Split(new string[] {";#"}, StringSplitOptions.RemoveEmptyEntries);
             if (splitted.Length == 2)

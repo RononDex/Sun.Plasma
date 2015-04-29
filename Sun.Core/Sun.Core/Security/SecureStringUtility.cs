@@ -33,6 +33,9 @@ namespace Sun.Core.Security
 
         private static IntPtr SecureStringToBSTR(SecureString ss)
         {
+            if (ss == null)
+                return IntPtr.Zero;
+
             IntPtr ptr = new IntPtr();
             ptr = Marshal.SecureStringToBSTR(ss);
             return ptr;
@@ -40,6 +43,9 @@ namespace Sun.Core.Security
 
         private static string PtrToStringBSTR(IntPtr ptr)
         {
+            if (ptr == IntPtr.Zero)
+                return null;
+
             string s = Marshal.PtrToStringBSTR(ptr);
             Marshal.ZeroFreeBSTR(ptr);
             return s;
