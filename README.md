@@ -11,7 +11,7 @@ A fleet wide management tool that all members of SUN have access to. It features
 
 PLASMA stands for: Publication of Logistics And Servicemen Main Assigments
 
-This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI stuff.
+This projects is coded in C# using the .NET Framework 4.5 and WPF for the GUI stuff.
 
 ---
 
@@ -25,11 +25,11 @@ This projects is coded in C# using the .NET Framework 4.5 and WPF for the GUI st
 ### Sun.WebInstaller
 This is a small web installer that will install Sun.Plasma on your computer. It gets the latest version from the server and downloads it.
 
-This projects is coded in C# using the .NET Framework 4.0 and WPF for the GUI stuff.
+This projects is coded in C# using the .NET Framework 4.5 and WPF for the GUI stuff.
 
 ---
 
 How can I contribute?
 --------
 I am always searching for some skilled serviceman that can help me out or give constructive feedback on the code.
-You can contact me in the SUN forums with your github user account name and I will add you.
+You can fork this repository make changes and do a pull request. If you want to push directly to this repository please contact me in the SUN forums.
