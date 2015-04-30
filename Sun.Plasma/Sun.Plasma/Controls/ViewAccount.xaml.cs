@@ -19,9 +19,13 @@ namespace Sun.Plasma.Controls
     /// </summary>
     public partial class ViewAccount : UserControl
     {
+        private ViewModel.ViewModelMyAccount vm;
+
         public ViewAccount()
         {
             InitializeComponent();
+            this.vm = new ViewModel.ViewModelMyAccount();
+            this.DataContext = vm;
         }
     }
 }

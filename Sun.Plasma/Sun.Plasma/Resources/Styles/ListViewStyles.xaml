@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- Removes the scrollviewer from the ListView by default, to prevent nested scrolling -->
-    <Style TargetType="ListView">
+    <!--<Style TargetType="ListView">
 
         <Setter Property="Template">
             <Setter.Value>
@@ -11,6 +11,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
 </ResourceDictionary>

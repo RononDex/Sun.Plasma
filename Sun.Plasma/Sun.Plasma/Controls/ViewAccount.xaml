@@ -32,12 +32,16 @@
             </GroupBox>
             <GroupBox Header="Manage your ships">
                 <StackPanel Orientation="Vertical">
-                    <ListView>
-                        <ListViewItem>
-
-                        </ListViewItem>
+                    <ListView ItemsSource="{Binding MyShips}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShipType}">Ship Type</GridViewColumn>
+                                <GridViewColumn DisplayMemberBinding="{Binding ShipName}">Ship Name</GridViewColumn>
+                                <GridViewColumn></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
                     </ListView>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
                         <ComboBox Width="150px" SelectedIndex="0">
                             <ComboBoxItem>Constellation</ComboBoxItem>
                             <ComboBoxItem>Hornet</ComboBoxItem>

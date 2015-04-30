@@ -75,6 +75,7 @@
     <Compile Include="ViewModelApplicationIInfo.cs" />
     <Compile Include="ViewModelLogin.cs" />
     <Compile Include="ViewModelMain.cs" />
+    <Compile Include="ViewModelMyAccount.cs" />
     <Compile Include="ViewModelNews.cs" />
     <Compile Include="ViewModelTools.cs" />
     <Compile Include="ViewModelUpdateSelfUpdater.cs" />
@@ -83,6 +84,10 @@
     <ProjectReference Include="..\..\Sun.Core\Sun.Core\Sun.Core.csproj">
       <Project>{9999a65e-f118-47f8-80c6-a91c00bb198b}</Project>
       <Name>Sun.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sun.Plasma.Controller\Sun.Plasma.Controller.csproj">
+      <Project>{4e0a53b1-1fd2-4031-9e79-8b368132c793}</Project>
+      <Name>Sun.Plasma.Controller</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

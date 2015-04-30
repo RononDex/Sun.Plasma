@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Plasma.WebInstaller", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.WebPublishing", "..\Sun.Core\Sun.WebPublishing\Sun.WebPublishing\Sun.WebPublishing.csproj", "{BD58B89A-2336-4AD1-9503-1C65F3A14082}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sun.Plasma.Controller", "Sun.Plasma.Controller\Sun.Plasma.Controller.csproj", "{4E0A53B1-1FD2-4031-9E79-8B368132C793}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,16 @@ Global
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BD58B89A-2336-4AD1-9503-1C65F3A14082}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4E0A53B1-1FD2-4031-9E79-8B368132C793}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

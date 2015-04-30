@@ -4,15 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" >
     <DockPanel LastChildFill="True">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <Label Style="{StaticResource LblContent}" FontSize="24pt" HorizontalAlignment="Center">PLASMA</Label>
-            <Label Style="{StaticResource LblContent}" FontWeight="Bold" FontSize="16pt" HorizontalAlignment="Center">Publication of Logistics And Servicemen Main Assigments</Label>
+        <StackPanel Orientation="Vertical">
+            <Label Style="{StaticResource LblContent}" FontSize="24pt">PLASMA</Label>
+            <Label Style="{StaticResource LblContent}" FontWeight="Bold" FontSize="16pt">Publication of Logistics And Servicemen Main Assigments</Label>
             <Label Style="{StaticResource LblContent}">Plasma is a community application for the SUN community. It aims to provide an easier way to manage and organise the group</Label>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 0">
+            <StackPanel Orientation="Horizontal" Margin="0 30 0 0">
                 <Label Style="{StaticResource LblContent}">Plasma Version:</Label>
                 <Label Style="{StaticResource LblContent}" Content="{Binding PlasmaVersion}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
                 <Label Style="{StaticResource LblContent}">SelfUpdater Version:</Label>
                 <Label Style="{StaticResource LblContent}" Content="{Binding SelfUpdaterVersion}" />
             </StackPanel>
