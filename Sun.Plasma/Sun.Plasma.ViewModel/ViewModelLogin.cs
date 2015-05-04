@@ -13,15 +13,16 @@ namespace Sun.Plasma.ViewModel
 {
     public class ViewModelLogin : ViewModelBase
     {
-        readonly string CREDENTIAL_FILE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SystemsUnitedNavy", "SUNLogin.blob");
+        private readonly string CREDENTIAL_FILE = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SystemsUnitedNavy", "SUNLogin.blob");
+        private const string CREDENTIAL_FILE_KEYNAME = "SecureCredentialsStorageEntropy";
 
 
         public ViewModelLogin()
         {
             // Check if the user has stored his credentials using "Rememeber me"
             if (File.Exists(CREDENTIAL_FILE))
-            {                
-                SecureStorage.RestorePerUserCredentials(out _userName, out _password, CREDENTIAL_FILE);
+            {
+                SecureStorage.RestorePerUserCredentials(out _userName, out _password, CREDENTIAL_FILE, CREDENTIAL_FILE_KEYNAME);
                 this.RememberMe = true;
             }
 
@@ -90,7 +91,7 @@ namespace Sun.Plasma.ViewModel
             this.Password = password;
             if (RememberMe && !string.IsNullOrEmpty(this.UserName) && this.Password.Length > 0)
             {
-                SecureStorage.StorePerUserCredentials(this.UserName, this.Password, CREDENTIAL_FILE);
+                SecureStorage.StorePerUserCredentials(this.UserName, this.Password, CREDENTIAL_FILE, CREDENTIAL_FILE_KEYNAME);
             }
             else
             {
@@ -100,6 +101,7 @@ namespace Sun.Plasma.ViewModel
 
             ApplicationTools.SetAppRegisteredToLaunchOnStartup("Sun.Plasma", LaunchOnStartup, Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Sun.Plasma.exe"));
 
+            // TODO: Validate User Credentials
             if (UserName == "test" 
                 && Sun.Core.Security.SecureStringUtility.SecureStringToString(password) == "test")
             {

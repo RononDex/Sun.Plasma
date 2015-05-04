@@ -20,7 +20,7 @@ namespace Sun.Core.Security
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        public static void StorePerUserCredentials(string userName, SecureString password, string fileName)
+        public static void StorePerUserCredentials(string userName, SecureString password, string fileName, string keyName)
         {
             // Generate additional entropy (will be used as the Initialization vector)
             // This is basically the (2048-bit) encryption key used to encrypt the credentials
@@ -35,7 +35,7 @@ namespace Sun.Core.Security
             if (currentUserRegistry == null)
                 currentUserRegistry = Registry.CurrentUser.CreateSubKey("Software\\SystemsUnitedNavy", RegistryKeyPermissionCheck.Default);
 
-            currentUserRegistry.SetValue("SecureCredentialsStorageEntropy", entropy);
+            currentUserRegistry.SetValue(keyName, entropy);
 
 
             var data = ProtectedData.Protect(StringToByteArray(string.Format("{0};#{1}",
@@ -51,7 +51,7 @@ namespace Sun.Core.Security
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        public static void RestorePerUserCredentials(out string userName, out SecureString password, string fileName)
+        public static void RestorePerUserCredentials(out string userName, out SecureString password, string fileName, string keyName)
         {
             userName = null;
             password = null;
@@ -61,7 +61,7 @@ namespace Sun.Core.Security
             if (sunKey == null) // If no encryption key exists, return no credentials as we can't decrypt the credentials files in this case
                 return;
 
-            var entropy = sunKey.GetValue("SecureCredentialsStorageEntropy");
+            var entropy = sunKey.GetValue(keyName);
 
             var decryptedData = ProtectedData.Unprotect(File.ReadAllBytes(fileName), (byte[])entropy, DataProtectionScope.CurrentUser);
             string credentials = ByteArrayToString(decryptedData);
