@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="LoginWindow" Style="{StaticResource SunWindow}" SizeToContent="WidthAndHeight">
     <StackPanel Orientation="Vertical">
-        <GroupBox >
+        <GroupBox Height="204" >
             <StackPanel Orientation="Vertical">
                 <Label Style="{StaticResource LblTitle}">Please login using your S.U.N. credentials</Label>
                 <Grid>
