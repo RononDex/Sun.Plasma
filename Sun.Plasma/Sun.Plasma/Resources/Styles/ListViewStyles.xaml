@@ -9,5 +9,17 @@
     <Style TargetType="GridViewColumnHeader">
         <Setter Property="Background" Value="Transparent"></Setter>
     </Style>
+       
+    <Style TargetType="ListViewItem">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Transparent" />
+            </Trigger>
+        </Style.Triggers>
 
+        <Style.Resources>
+            <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="#00000000" />
+            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#00000000"/>
+        </Style.Resources>
+    </Style>
 </ResourceDictionary>

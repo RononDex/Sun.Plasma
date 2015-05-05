@@ -185,6 +185,7 @@
 
     <!--Link Button Menu Style-->
     <Style TargetType="Button" x:Key="LinkButtonMenu" BasedOn="{StaticResource LinkButton}">
+        <Setter Property="Margin" Value="10 0 0 5" />
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>

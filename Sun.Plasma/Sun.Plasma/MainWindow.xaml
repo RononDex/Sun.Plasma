@@ -1,10 +1,13 @@
 ﻿<Window x:Class="Sun.Plasma.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        mc:Ignorable="d" 
         IsVisibleChanged="Window_IsVisibleChanged"
-        Title="MainWindow" MinHeight="800" MinWidth="1000" Style="{StaticResource SunWindow}" Width="1104.478" Height="774.627">
+        Title="MainWindow" MinHeight="800" MinWidth="1000" d:DesignHeight="800" d:DesignWidth="1200" Style="{StaticResource SunWindow}">
     <DockPanel Margin="0 20 0 0">
-        <Grid Name="CtlFooterContainer" Margin="180 0 0 0" DockPanel.Dock="Bottom">
+        <Grid Name="CtlFooterContainer" Margin="190 0 0 0" DockPanel.Dock="Bottom">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -22,8 +25,8 @@
             </StackPanel>
         </Grid>
         <DockPanel DockPanel.Dock="Top">
-            <DockPanel VerticalAlignment="Stretch">
-                <Image Width="175" DockPanel.Dock="Top" Source="{StaticResource SunLogo}" />
+            <DockPanel VerticalAlignment="Stretch" LastChildFill="False">
+                <Image Width="190" DockPanel.Dock="Top" Source="{StaticResource SunLogo}" />
 
                 <!--Navigation Menu-->
                 <StackPanel Orientation="Vertical" Margin="5 0 0 0" DockPanel.Dock="Top">
@@ -38,13 +41,13 @@
                 </StackPanel>
 
                 <!--Launch buttons-->
-                <StackPanel DockPanel.Dock="Bottom" Margin="5 0 0 0" Orientation="Vertical" Height="50">
+                <StackPanel DockPanel.Dock="Top" Margin="5 50 0 0" Orientation="Vertical" Height="50">
                     <Button Style="{StaticResource LinkButtonMenu}">Launch Star Citizen</Button>
                     <Button Style="{StaticResource LinkButtonMenu}">Launch &amp; connect Mumble</Button>
                 </StackPanel>
             </DockPanel>
 
-            <GroupBox DockPanel.Dock="Right" VerticalAlignment="Stretch" Margin="0 0 0 0" Name="PnlMainContent" >
+            <GroupBox DockPanel.Dock="Right" Margin="0 0 0 0" Name="PnlMainContent" >
                 <StackPanel Orientation="Vertical">
                     <TextBlock Style="{StaticResource TextTitle}">Some Title</TextBlock>
                     <TextBox Style="{StaticResource TbxBlockStyle}">
