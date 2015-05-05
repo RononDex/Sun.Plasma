@@ -32,6 +32,6 @@
                 </Grid>
             </StackPanel>
         </GroupBox>
-        <Button IsDefault="True" Content="Login" Margin="0 5 0 0" HorizontalAlignment="Right" Style="{StaticResource StarCitizenBigButton}" Click="BtnLoginClick" />
+        <Button IsDefault="True" Content="Login" Margin="0 5 0 0" HorizontalAlignment="Right" Style="{StaticResource BigButton}" Click="BtnLoginClick" />
     </StackPanel>
 </Window>

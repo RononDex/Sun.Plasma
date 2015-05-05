@@ -102,34 +102,8 @@
         </Setter>
     </Style>
 
-    <!-- Small button style  -->
-    <Style TargetType="Button" x:Key="StarCitizenSmallButton">
-        <Setter Property="Height" Value="27" />
-        <Setter Property="Width" Value="150" />
-        <Setter Property="Foreground" Value="{StaticResource ButtonTextBrush}" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border TextBlock.Foreground="{TemplateBinding Foreground}"
-                            BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource ButtonSmallBackgroundBrush}">
-
-                        <ContentPresenter Margin="0"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            RecognizesAccessKey="True" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Cursor" Value="Hand" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <!-- Big button style  -->
-    <Style TargetType="Button" x:Key="StarCitizenBigButton">
+    <Style TargetType="Button" x:Key="BigButton">
         <Setter Property="Height" Value="39" />
         <Setter Property="FontSize" Value="15" />
         <Setter Property="FontWeight" Value="ExtraBold" />
@@ -203,9 +177,19 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Link Button Menu Style-->
+    <Style TargetType="Button" x:Key="LinkButtonMenu" BasedOn="{StaticResource LinkButton}">
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock TextDecorations="Underline" Foreground="{StaticResource LinkButtonMenuBrush}" FontSize="12" Text="{TemplateBinding Content}"/>
+                </DataTemplate>
             </Setter.Value>
         </Setter>
     </Style>

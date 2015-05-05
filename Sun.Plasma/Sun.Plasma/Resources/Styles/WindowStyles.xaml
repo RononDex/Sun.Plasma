@@ -38,9 +38,6 @@
 
                                         <Button Name="BtnMinimize"  Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource MinimizeButton}" BorderThickness="0" />
                                         <Button Name="BtnClose"  Grid.Column="2" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
-
-                                        <Label Content="P.L.A.S.M.A." Style="{StaticResource LblContent}" FontWeight="Bold" />
-
                                     </Grid>
                                     <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />
                                 </DockPanel>
