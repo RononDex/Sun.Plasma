@@ -2,17 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- A window with a SUN background -->
-    <Style TargetType="Window" x:Key="SunWindow">
-        <Setter Property="Icon" Value="{StaticResource SunLogoDark}" />
-        <Setter Property="Background" >
-            <Setter.Value>
-                <ImageBrush AlignmentX="Center" AlignmentY="Center" Stretch="UniformToFill" ImageSource="{StaticResource ScBackgroundImage}" />
-            </Setter.Value>
-        </Setter>
-        <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="AllowDrop" Value="True" />
-        <Setter Property="ResizeMode" Value="NoResize" />
-
+    <Style TargetType="Window" x:Key="MainWindow">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
@@ -37,6 +27,53 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Button Name="BtnMinimize"  Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource MinimizeButton}" BorderThickness="0" />
+                                        <Button Name="BtnClose"  Grid.Column="2" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
+                                    </Grid>
+                                    <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />
+                                </DockPanel>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Default Window stlye -->
+    <Style TargetType="Window">
+        <Setter Property="Icon" Value="{StaticResource SunLogoDark}" />
+        <Setter Property="Background" >
+            <Setter.Value>
+                <ImageBrush AlignmentX="Center" AlignmentY="Center" Stretch="UniformToFill" ImageSource="{StaticResource ScBackgroundImage}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowDrop" Value="True" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Border x:Name="CtlMoveable"  BorderThickness="1" BorderBrush="{StaticResource BorderLightBrush}"  Background="{TemplateBinding Background}">
+                        <Grid x:Name="LayoutRoot">
+                            <Grid>
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" VerticalAlignment="Top" Height="14" x:Name="top" Margin="17,0,17,0"/>
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" x:Name="bottom" Height="14" VerticalAlignment="Bottom" Margin="17,0,17,0"/>
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" HorizontalAlignment="Left" Margin="0,14,0,14" Width="17" x:Name="left"/>
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" Margin="0,14,0,14" Width="17" HorizontalAlignment="Right" x:Name="right" />
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="17" Height="14" x:Name="bottomLeft" />
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" VerticalAlignment="Bottom" Height="14" Width="17" HorizontalAlignment="Right" x:Name="bottomRight" />
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" HorizontalAlignment="Right" Width="17" Height="14" VerticalAlignment="Top" x:Name="topRight" />
+                                <Rectangle Fill="Transparent" Stroke="{x:Null}" HorizontalAlignment="Left" Width="17" VerticalAlignment="Top" Height="14" x:Name="topLeft" />
+
+                                <DockPanel LastChildFill="True">
+                                    <Grid DockPanel.Dock="Top" Margin="7" Height="25">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="20" SharedSizeGroup="test" />
+                                            <ColumnDefinition Width="20" SharedSizeGroup="test" />
+                                        </Grid.ColumnDefinitions>
+
                                         <Button Name="BtnClose"  Grid.Column="2" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
                                     </Grid>
                                     <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />

@@ -5,8 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         mc:Ignorable="d" 
         IsVisibleChanged="Window_IsVisibleChanged"
-        Title="MainWindow" MinHeight="800" MinWidth="1000" d:DesignHeight="800" d:DesignWidth="1200" Style="{StaticResource SunWindow}">
-    <DockPanel Margin="0 20 0 0">
+        Title="MainWindow" MinHeight="800" MinWidth="1000" d:DesignHeight="800" d:DesignWidth="1200" Style="{StaticResource MainWindow}">
+    <DockPanel Margin="0 0 0 0">
         <Grid Name="CtlFooterContainer" Margin="190 0 0 0" DockPanel.Dock="Bottom">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
