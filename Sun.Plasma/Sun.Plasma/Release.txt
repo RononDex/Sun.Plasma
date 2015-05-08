@@ -8,7 +8,7 @@ New stuff:
  - New option on login screen to automatically launch application on windows startup
  - Added "Coming Soon" screens to menu entries that are not implemented yet.
  - Added "Fleet Resources" menu item, that opens browsers with the fleet resources 
- - Some UI / style adjustements
+ - Some UI / style adjustements (rounded window corners, ...)
  
  Projects to publish:
   - Sun.Plasma
