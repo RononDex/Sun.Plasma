@@ -26,8 +26,8 @@
                                             <ColumnDefinition Width="20" SharedSizeGroup="test" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Button Name="BtnMinimize"  Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource MinimizeButton}" BorderThickness="0" />
-                                        <Button Name="BtnClose"  Grid.Column="2" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
+                                        <Button Name="BtnMinimize" Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource MinimizeButton}" BorderThickness="0" />
+                                        <Button Name="BtnClose" Grid.Column="2" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
                                     </Grid>
                                     <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />
                                 </DockPanel>
@@ -47,6 +47,7 @@
                 <ImageBrush AlignmentX="Center" AlignmentY="Center" Stretch="UniformToFill" ImageSource="{StaticResource ScBackgroundImage}" />
             </Setter.Value>
         </Setter>
+        
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="AllowDrop" Value="True" />
         <Setter Property="ResizeMode" Value="NoResize" />
