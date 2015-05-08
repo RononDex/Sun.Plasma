@@ -1,4 +1,4 @@
-﻿Bugfixes:
+Bugfixes:
  - Network related stuff (for example loading news feed) now also works when you are behind a proxy
  - AppData files (logfiles, SunLogin.blob) now get stored correctly in their own subfolder instead of directly in %APPDATA%
  - Increased security when storing credentials using "Remember Me" in the login screen. Your credentials are now getting encrypted using a 2048-bit key that changes everytime you log in, and the key is safely stored in your registery only your user can access.
@@ -8,7 +8,7 @@ New stuff:
  - New option on login screen to automatically launch application on windows startup
  - Added "Coming Soon" screens to menu entries that are not implemented yet.
  - Added "Fleet Resources" menu item, that opens browsers with the fleet resources 
- - Some UI / style adjustements
+ - Some UI / style adjustements (rounded window corners, ...)
  
  Projects to publish:
   - Sun.Plasma
