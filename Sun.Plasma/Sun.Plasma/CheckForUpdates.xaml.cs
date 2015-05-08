@@ -44,14 +44,14 @@ namespace Sun.Plasma
 
             Application.Current.MainWindow = this;
 
-            // Disable Minimize and close buttons
-            var BtnClose = (FrameworkElement)this.Template.FindName("BtnClose", this);
-            if (BtnClose != null)
-                BtnClose.Visibility = System.Windows.Visibility.Hidden;
+            //// Disable Minimize and close buttons
+            //var BtnClose = (FrameworkElement)this.Template.FindName("BtnClose", this);
+            //if (BtnClose != null)
+            //    BtnClose.Visibility = System.Windows.Visibility.Hidden;
 
-            var BtnMinimize = (FrameworkElement)this.Template.FindName("BtnMinimize", this);
-            if (BtnMinimize != null)
-                BtnMinimize.Visibility = System.Windows.Visibility.Hidden;
+            //var BtnMinimize = (FrameworkElement)this.Template.FindName("BtnMinimize", this);
+            //if (BtnMinimize != null)
+            //    BtnMinimize.Visibility = System.Windows.Visibility.Hidden;
 
             // Check for updates async
             // and register an event to catch its answer

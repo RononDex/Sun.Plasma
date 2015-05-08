@@ -63,6 +63,25 @@
         </Style.Triggers>
     </Style>
 
+    <!-- Minimize Button -->
+    <Style TargetType="Button" x:Key="SettingsButton" BasedOn="{StaticResource HeaderButton}">
+        <Setter Property="Content">
+            <Setter.Value>
+                <Image Source="{StaticResource SettingsIcon}" Width="12" Height="12" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Command" Value="{Binding MinimizeCommand}" />
+        <!--<Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Button.Content">
+                    <Setter.Value>
+                        <Image Source="{StaticResource MinimizeIconHover}" Width="12" Height="12" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>-->
+    </Style>
+
     <!-- Text button style -->
     <Style TargetType="Button" x:Key="TextButton" >
         <Setter Property="Foreground" Value="{StaticResource TextButtonBrush}" />
