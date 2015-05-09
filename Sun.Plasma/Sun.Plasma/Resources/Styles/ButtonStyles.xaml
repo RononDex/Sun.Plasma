@@ -63,11 +63,11 @@
         </Style.Triggers>
     </Style>
 
-    <!-- Minimize Button -->
+    <!-- Settings Button -->
     <Style TargetType="Button" x:Key="SettingsButton" BasedOn="{StaticResource HeaderButton}">
         <Setter Property="Content">
             <Setter.Value>
-                <Image Source="{StaticResource SettingsIcon}" Width="12" Height="12" />
+                <Image Source="{StaticResource SettingsIcon}" Width="14" Height="14" />
             </Setter.Value>
         </Setter>
         <Setter Property="Command" Value="{Binding MinimizeCommand}" />

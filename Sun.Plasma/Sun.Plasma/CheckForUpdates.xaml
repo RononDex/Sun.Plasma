@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Sun.Plasma.CheckForUpdates"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="CheckForUpdates" Width="402" Height="128" Style="{StaticResource WindowNoButtons}">
+        Title="CheckForUpdates" Width="402" Height="159" Style="{StaticResource WindowNoButtons}">
     <GroupBox>
         <StackPanel Orientation="Vertical">
             <Label Style="{StaticResource LblTitle}">Checking for updates. Please wait...</Label>
