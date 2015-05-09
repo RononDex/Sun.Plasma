@@ -48,6 +48,12 @@
             </DockPanel>
 
             <GroupBox DockPanel.Dock="Right" Margin="0 0 0 0" Name="PnlMainContent" >
+                <GroupBox.Resources>
+                    <Style TargetType="ScrollViewer">
+                        <EventSetter Event="PreviewMouseWheel" Handler="ScrollViewer_PreviewMouseWheel" />
+                    </Style>
+                </GroupBox.Resources>
+
                 <StackPanel Orientation="Vertical">
                     <TextBlock Style="{StaticResource TextTitle}">Some Title</TextBlock>
                     <TextBox Style="{StaticResource TbxBlockStyle}">

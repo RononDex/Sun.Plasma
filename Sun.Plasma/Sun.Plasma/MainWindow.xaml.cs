@@ -166,6 +166,16 @@ namespace Sun.Plasma
 
         #endregion
 
+        #region UI Helpers
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            var scrollViewer = sender as ScrollViewer;
+            double change = e.Delta;
+            double currentPosition = scrollViewer.VerticalOffset;
 
+            scrollViewer.ScrollToVerticalOffset(currentPosition - change);
+        }
+
+        #endregion
     }
 }
