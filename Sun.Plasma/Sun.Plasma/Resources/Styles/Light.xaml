@@ -12,6 +12,7 @@
     <BitmapImage x:Key="MinimizeIcon" UriSource="/Resources/Images/IconMinimize.png" />
     <BitmapImage x:Key="MinimizeIconHover" UriSource="/Resources/Images/IconMinimizeHover.png" />
     <BitmapImage x:Key="SettingsIcon" UriSource="/Resources/Images/IconSettings.png" />
+    <BitmapImage x:Key="SettingsIconHover" UriSource="/Resources/Images/IconSettingsHover.png" />
     
     <BitmapImage x:Key="SunLogo" UriSource="/Resources/Images/SunLogo.png" />
     <BitmapImage x:Key="SunLogoDark" UriSource="/Resources/Images/PlasmaLogo.png" />

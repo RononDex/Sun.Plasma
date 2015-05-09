@@ -298,6 +298,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\log4net.dll" />
+    <Resource Include="Resources\Images\IconSettingsHover.png" />
     <Resource Include="Resources\Images\IconSettings.png" />
     <Resource Include="Release.txt" />
     <Resource Include="lib\log4net.xml" />

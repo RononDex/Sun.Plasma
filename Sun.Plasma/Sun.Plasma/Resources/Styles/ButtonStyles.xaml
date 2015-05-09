@@ -70,16 +70,16 @@
                 <Image Source="{StaticResource SettingsIcon}" Width="14" Height="14" />
             </Setter.Value>
         </Setter>
-        <Setter Property="Command" Value="{Binding MinimizeCommand}" />
-        <!--<Style.Triggers>
+        <!--<Setter Property="Command" Value="{Binding MinimizeCommand}" />-->
+        <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Button.Content">
                     <Setter.Value>
-                        <Image Source="{StaticResource MinimizeIconHover}" Width="12" Height="12" />
+                        <Image Source="{StaticResource SettingsIconHover}" Width="14" Height="14" />
                     </Setter.Value>
                 </Setter>
             </Trigger>
-        </Style.Triggers>-->
+        </Style.Triggers>
     </Style>
 
     <!-- Text button style -->
