@@ -42,7 +42,7 @@
 
                 <!--Launch buttons-->
                 <StackPanel DockPanel.Dock="Top" Margin="5 50 0 0" Orientation="Vertical" Height="50">
-                    <Button Style="{StaticResource LinkButtonMenu}">Launch Star Citizen</Button>
+                    <Button Style="{StaticResource LinkButtonMenu}" Command="{Binding LaunchStarCitizenCommand}">Launch Star Citizen</Button>
                     <Button Style="{StaticResource LinkButtonMenu}">Launch &amp; connect Mumble</Button>
                 </StackPanel>
             </DockPanel>

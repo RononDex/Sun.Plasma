@@ -12,6 +12,8 @@ namespace Sun.Plasma.ViewModel
     /// </summary>
     public class ViewModelMain : ViewModelBase
     {
+        #region Commands
+
         public ICommand CloseCommand
         {
             get { return new Commands.CloseCommand(); }
@@ -26,6 +28,13 @@ namespace Sun.Plasma.ViewModel
         {
             get { return new Commands.ExitCommand(); }
         }
+
+        public ICommand LaunchStarCitizenCommand
+        {
+            get { return new Commands.LaunchStarCitizenCommand(); }
+        }
+
+        #endregion
 
         /// <summary>
         /// The version of the running application
