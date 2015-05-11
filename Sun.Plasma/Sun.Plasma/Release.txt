@@ -10,6 +10,7 @@ New stuff:
  - Added "Coming Soon" screens to menu entries that are not implemented yet.
  - Added "Fleet Resources" menu item, that opens browsers with the fleet resources 
  - Some UI / style adjustements (rounded window corners, ...)
+ - Star Citizen can now be launched directly from Sun.Plasma
  
  Projects to publish:
   - Sun.Plasma
