@@ -279,6 +279,10 @@
       <Project>{9999A65E-F118-47F8-80C6-A91C00BB198B}</Project>
       <Name>Sun.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Sun.StartAsAdmin\Sun.StartAsAdmin.csproj">
+      <Project>{e742b23d-5672-4665-a10c-c15221094623}</Project>
+      <Name>Sun.StartAsAdmin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sun.Plasma.ViewModel\Sun.Plasma.ViewModel.csproj">
       <Project>{7AD39374-CA63-4352-8458-90587D237EF0}</Project>
       <Name>Sun.Plasma.ViewModel</Name>
