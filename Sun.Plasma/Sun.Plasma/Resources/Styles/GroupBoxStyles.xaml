@@ -10,8 +10,8 @@
                     <Border CornerRadius="4" BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource ContentBackgroundBrush}">
                         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                             <StackPanel Orientation="Vertical" CanVerticallyScroll="True">
-                                <Label Content="{TemplateBinding Header}" Margin="5,5,0,0" Style="{StaticResource SmallTitle}"></Label>
-                                <ContentPresenter Margin="10, 5, 10, 10" RecognizesAccessKey="True" />
+                                <Label Content="{TemplateBinding Header}" Margin="5,5,0,0" Style="{StaticResource SmallTitle}" />
+                                <ContentPresenter Margin="10, 5, 10, 10" RecognizesAccessKey="True" x:Name="CtlGroupboxPresenter" />
                             </StackPanel>
                         </ScrollViewer>
                     </Border>

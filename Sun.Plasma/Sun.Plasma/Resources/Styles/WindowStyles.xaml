@@ -4,11 +4,12 @@
     <Style TargetType="Window" x:Key="WindowBaseStyle">
         <Setter Property="Icon" Value="{StaticResource SunLogoDark}" />
         <Setter Property="Background"  Value="Transparent" />
-        <Setter Property="Opacity" Value="1"></Setter>
+        <Setter Property="Opacity" Value="1" />
 
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="AllowDrop" Value="True" />
         <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="AllowsTransparency" Value="True" />
     </Style>
     
     <!-- Window style for the main window -->
@@ -75,13 +76,6 @@
                                 <Rectangle Fill="Transparent" Stroke="{x:Null}" HorizontalAlignment="Left" Width="17" VerticalAlignment="Top" Height="14" x:Name="topLeft" />
 
                                 <DockPanel LastChildFill="True">
-                                    <Grid DockPanel.Dock="Top" Margin="7" Height="25">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="20" SharedSizeGroup="test" />
-                                        </Grid.ColumnDefinitions>
-                                    </Grid>
-
                                     <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />
                                 </DockPanel>
                             </Grid>
@@ -93,7 +87,7 @@
     </Style>
 
     <!-- Default Window stlye with only the "close button" -->
-    <Style TargetType="Window" BasedOn="{StaticResource WindowBaseStyle}">
+    <Style TargetType="Window" x:Key="WindowCloseButton"  BasedOn="{StaticResource WindowBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
