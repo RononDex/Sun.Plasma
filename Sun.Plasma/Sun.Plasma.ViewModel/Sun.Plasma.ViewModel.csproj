@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Commands\CloseCommand.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\LaunchMumbleCommand.cs" />
     <Compile Include="Commands\LaunchStarCitizenCommand.cs" />
     <Compile Include="Commands\MinimizeCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

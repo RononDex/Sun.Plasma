@@ -34,6 +34,11 @@ namespace Sun.Plasma.ViewModel
             get { return new Commands.LaunchStarCitizenCommand(); }
         }
 
+        public ICommand LaunchMumbleCommand
+        {
+            get { return new Commands.LaunchMumbleCommand() ; }
+        }
+
         #endregion
 
         /// <summary>
