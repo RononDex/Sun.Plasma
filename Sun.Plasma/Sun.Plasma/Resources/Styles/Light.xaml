@@ -28,6 +28,7 @@
     <Color x:Key="ButtonTextHighlightColor">#0000BB</Color>
     <Color x:Key="ButtonSmallBackgroundColor">White</Color>
     <Color x:Key="LinkButtonMenuColor">#999999</Color>
+    <Color x:Key="LinkButtonMenuDisabledColor">#CCCCCC</Color>
 
     <Color x:Key="ContentBackgroundColor">#DDDDDD</Color>
     <Color x:Key="TextButtonColor">Black</Color>
@@ -50,6 +51,7 @@
     <SolidColorBrush x:Key="ButtonTextHighlightBrush" Color="{StaticResource ButtonTextHighlightColor}" />
     <SolidColorBrush x:Key="ButtonSmallBackgroundBrush" Color="{StaticResource ButtonSmallBackgroundColor}" />
     <SolidColorBrush x:Key="LinkButtonMenuBrush" Color="{StaticResource LinkButtonMenuColor}" />
+    <SolidColorBrush x:Key="LinkButtonMenuDisabledBrush" Color="{StaticResource LinkButtonMenuDisabledColor}" />
 
     <SolidColorBrush x:Key="TextBoxBrush" Color="{StaticResource TextBoxColor}" />
     <SolidColorBrush x:Key="TextBoxBackBrush" Color="{StaticResource TextBoxBackColor}" />

@@ -3,15 +3,23 @@ Bugfixes:
  - AppData files (logfiles, SunLogin.blob) now get stored correctly in their own subfolder instead of directly in %APPDATA%
  - Increased security when storing credentials using "Remember Me" in the login screen. Your credentials are now getting encrypted using a 2048-bit key that changes everytime you log in, and the key is safely stored in your registery only your user can access.
  - Fixed a bug, where the ScrollWheel in the news window would not work
+ - Fixed a bug in the self-updating mechanism (missing file).
 
 New stuff:
  - Updated from .Net Framework v4.0 to .Net Framework v4.5
- - New option on login screen to automatically launch application on windows startup
+ - New option on login screen to automatically launch application on windows startup (will be moved to Settings window later)
  - Added "Coming Soon" screens to menu entries that are not implemented yet.
- - Added "Fleet Resources" menu item, that opens browsers with the fleet resources 
+ - Added "Fleet Resources" menu item, that opens browsers with the fleet resources
+ - Added "My Account" control (is only a clickdummy atm)
  - Some UI / style adjustements (rounded window corners, ...)
+ - Star Citizen can now be launched directly from Sun.Plasma
+ - Made applications compatible with Windows 10 (untested)
  
  Projects to publish:
   - Sun.Plasma
   - Sun.SelfUpdater
   - Sun.WebInstaller
+
+  Added files:
+  - Sun.Plasma:
+    - Sun.StartAsAdmin.exe
