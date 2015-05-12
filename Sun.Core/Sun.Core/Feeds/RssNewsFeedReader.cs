@@ -29,6 +29,8 @@ namespace Sun.Core.Feeds
         {
             try
             {
+                CoreTools.Logger.InfoFormat("Reading RSS feed \"{0}\"", source);
+
                 var res = new List<NewsFeedEntry>();
 
                 var reader = XmlReader.Create(source);

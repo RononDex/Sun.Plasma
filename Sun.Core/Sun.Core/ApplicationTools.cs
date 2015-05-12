@@ -35,6 +35,8 @@ namespace Sun.Core
                 rkApp.SetValue(appName, executablePath);
             else
                 rkApp.DeleteValue(appName, false);
+
+            CoreTools.Logger.InfoFormat("Set the autostart of application \"{0}\" to {1}", executablePath, autoStart);
         }
     }
 }

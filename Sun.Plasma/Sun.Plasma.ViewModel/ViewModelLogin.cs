@@ -92,11 +92,15 @@ namespace Sun.Plasma.ViewModel
             if (RememberMe && !string.IsNullOrEmpty(this.UserName) && this.Password.Length > 0)
             {
                 SecureStorage.StorePerUserCredentials(this.UserName, this.Password, CREDENTIAL_FILE, CREDENTIAL_FILE_KEYNAME);
+                ViewModelTools.Logger.InfoFormat("Stored encrypted credentials");
             }
             else
             {
                 if (File.Exists(CREDENTIAL_FILE))
+                {
                     File.Delete(CREDENTIAL_FILE);
+                    ViewModelTools.Logger.InfoFormat("Deleted stored encrypted credentials");
+                }
             }
 
             ApplicationTools.SetAppRegisteredToLaunchOnStartup("Sun.Plasma", LaunchOnStartup, Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Sun.Plasma.exe"));

@@ -30,12 +30,14 @@ namespace Sun.Core.Wpf
         {
             get 
             { 
+                CoreTools.Logger.DebugFormat("Loading control {0} from WPF cache", controlName);
                 if (string.IsNullOrEmpty(controlName)) return null;
                 else if (Cache.ContainsKey(controlName)) return Cache[controlName];
                 else return null;
             }
             set
             {
+                CoreTools.Logger.DebugFormat("Storing control {0} in WPF cache", controlName);
                 if (Cache.ContainsKey(controlName))
                     Cache[controlName] = value;
                 else
@@ -49,6 +51,7 @@ namespace Sun.Core.Wpf
         /// <param name="controlName"></param>
         public void RemoveUserControlFromCache(string controlName)
         {
+            CoreTools.Logger.DebugFormat("Removing control {0} from WPF cache", controlName);
             if (Cache.ContainsKey(controlName))            
                 Cache.Remove(controlName);            
         }

@@ -87,7 +87,7 @@ namespace Sun.Core.SelfUpdating
         /// <param name="localPath">The local path of the application to the executable file</param>
         public void UpdateApplication(Application app, string localPath, string rootUrl)
         {
-            CoreTools.Logger.DebugFormat("Updating application \"{0}\" from {1} in {2}", app.Name, rootUrl, localPath);
+            CoreTools.Logger.InfoFormat("Updating application \"{0}\" from {1} in {2}", app.Name, rootUrl, localPath);
 
             try
             {
@@ -109,6 +109,7 @@ namespace Sun.Core.SelfUpdating
                         httpClient.DownloadFile(string.Format("{2}/{0}/{1}", app.Name, file, rootUrl), localFilePath);
                         downloadCount++;
                         app.UpdateProgress = (float)downloadCount / (float)app.Files.Count;
+                        CoreTools.Logger.DebugFormat("Updated file {0}", localFilePath);
                     }
 
                     app.UpdateStatus = "Deleting unnecessary files";
@@ -125,6 +126,7 @@ namespace Sun.Core.SelfUpdating
                                 if (File.Exists(localFilePath))
                                 {
                                     File.Delete(localFilePath);
+                                    CoreTools.Logger.DebugFormat("Deleted file {0}", localFilePath);
                                 }
                             }
                         }

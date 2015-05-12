@@ -42,6 +42,21 @@ namespace Sun.Plasma
 
             // Set up the context menu for the notify icon
             NotifyContextMenu = new System.Windows.Forms.ContextMenu();
+
+            // Launch Star Citizen
+            var launchStarCitizenItem = NotifyContextMenu.MenuItems.Add("Launch Star Citizen");
+            var command = new ViewModel.Commands.LaunchStarCitizenCommand();
+            launchStarCitizenItem.Enabled = command.CanExecute(null);
+            launchStarCitizenItem.Click += (sender, args) => command.Execute(null);
+
+            // Launch Mumble
+            var launchMumble = NotifyContextMenu.MenuItems.Add("Launch Mumble");
+            var commandMumble = new ViewModel.Commands.LaunchMumbleCommand();
+            launchMumble.Enabled = commandMumble.CanExecute(null);
+            launchMumble.Click += (sender, args) => commandMumble.Execute(null);
+
+            // Exit
+            NotifyContextMenu.MenuItems.Add("-");
             NotifyContextMenu.MenuItems.Add("Exit", NotifyContextMenuExit_Click);
 
             NotifyIcon.ContextMenu = NotifyContextMenu;

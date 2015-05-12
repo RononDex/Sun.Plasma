@@ -54,6 +54,8 @@ namespace Sun.Core.Ftp
 
             #endregion
 
+            CoreTools.Logger.DebugFormat("FTP: Initializising FTP Client (host: {0})", host);
+
             this.Host = string.Format("ftp://{0}", host);
 
             // Make sure that the Host Url has a leading '/'
@@ -63,6 +65,8 @@ namespace Sun.Core.Ftp
             // When credentials set, store them for further use
             if (!string.IsNullOrEmpty(user))
                 Credenntials = new NetworkCredential(user, password);
+
+            CoreTools.Logger.InfoFormat("FTP: Client Initialized with url {0}", this.Host);
         }
 
         /// <summary>
@@ -108,6 +112,8 @@ namespace Sun.Core.Ftp
                     }
                 }
             }
+
+            CoreTools.Logger.InfoFormat("FTP: Downloaded the file {0} to {1}", remotePath, localPath);
         }
 
         /// <summary>
@@ -117,6 +123,8 @@ namespace Sun.Core.Ftp
         /// <returns></returns>
         public string GetFileContent(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Reading contents of file {0}", remotePath);
+
             // Create Request
             this.SetupFtpRequest(string.Format("{0}{1}", this.Host, remotePath));
             this.FtpRequest.UseBinary = true;
@@ -126,7 +134,11 @@ namespace Sun.Core.Ftp
             var response = this.FtpRequest.GetResponse();
             var reader = new StreamReader(response.GetResponseStream());
 
-            return reader.ReadToEnd();
+            var contents = reader.ReadToEnd();
+            
+            CoreTools.Logger.InfoFormat("FTP: Read file {0} from server", remotePath);
+
+            return contents;
         }
 
         /// <summary>
@@ -142,6 +154,8 @@ namespace Sun.Core.Ftp
                 throw new FileNotFoundException(string.Format("Couldn't find the file {0}", localPath));
 
             #endregion
+
+            CoreTools.Logger.DebugFormat("FTP: Uploading file {0} to {1} on server", localPath, remotePath);
 
             // Create Request
             this.SetupFtpRequest(string.Format("{0}{1}", remotePath, localPath));
@@ -160,6 +174,8 @@ namespace Sun.Core.Ftp
                 requestStream.Write(buffer, 0, bytesSent);
                 bytesSent = localStream.Read(buffer, 0, BUFFER_SIZE);
             }
+
+            CoreTools.Logger.InfoFormat("FTP: Uploaded file {0} to {1}", localPath, remotePath);
         }
 
         /// <summary>
@@ -168,6 +184,8 @@ namespace Sun.Core.Ftp
         /// <param name="remotePath"></param>
         public void DeleteFile(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Deleting file {0} from server", remotePath);
+
             // Create Request
             this.SetupFtpRequest(string.Format("{0}{1}", this.Host, remotePath));
             this.FtpRequest.Method = WebRequestMethods.Ftp.DeleteFile;
@@ -178,6 +196,8 @@ namespace Sun.Core.Ftp
             // Clean up
             response.Close();
             response = null;
+
+            CoreTools.Logger.InfoFormat("FTP: Deleted file {0} from server", remotePath);
         }
 
         /// <summary>
@@ -186,6 +206,8 @@ namespace Sun.Core.Ftp
         /// <param name="remotePath"></param>
         public void CreateDirectory(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Creatind directory {0}", remotePath);
+
             // Create Request
             this.SetupFtpRequest(string.Format("{0}{1}", this.Host, remotePath));
             this.FtpRequest.Method = WebRequestMethods.Ftp.MakeDirectory;
@@ -193,6 +215,8 @@ namespace Sun.Core.Ftp
             // Execute MakeDirectory command
             var response = this.FtpRequest.GetResponse();
             response.Close();
+
+            CoreTools.Logger.InfoFormat("FTP: Directory created {0}", remotePath);
         }
 
         /// <summary>
@@ -202,6 +226,8 @@ namespace Sun.Core.Ftp
         /// <returns></returns>
         public List<string> GetDirectoryContents(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Getting directory contents for {0}", remotePath);
+
             // Remove '/' at the beginning
             if (remotePath.StartsWith("/"))
                 remotePath = remotePath.Substring(1);
@@ -222,8 +248,13 @@ namespace Sun.Core.Ftp
                 string directory = reader.ReadLine();
                 if (!DIRECTORY_INGORE_LIST.Contains(directory)
                     && !DIRECTORY_INGORE_LIST.Any(s => directory.EndsWith(string.Format("/{0}", s))))
+                {
                     res.Add(directory.Replace(remotePath, string.Empty));
+                    CoreTools.Logger.DebugFormat("FTP: Found sub object {0}", directory.Replace(remotePath, string.Empty));
+                }
             }
+
+            CoreTools.Logger.InfoFormat("FTP: Directory content read for {0}", remotePath);
 
             return res;
         }
@@ -235,6 +266,8 @@ namespace Sun.Core.Ftp
         /// <returns></returns>
         public List<string> GetDirectoryContentsDetails(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Getting directory content details for {0}", remotePath);
+
             // Create Request
             this.SetupFtpRequest(string.Format("{0}{1}", this.Host, remotePath));
             this.FtpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
@@ -251,8 +284,13 @@ namespace Sun.Core.Ftp
                 string directory = reader.ReadLine();
                 if (!DIRECTORY_INGORE_LIST.Contains(directory)
                     && !DIRECTORY_INGORE_LIST.Any(s => directory.EndsWith(string.Format("/{0}", s))))
+                {
                     res.Add(directory);
+                    CoreTools.Logger.DebugFormat("FTP: Found sub object {0}", directory);
+                }
             }
+
+            CoreTools.Logger.InfoFormat("FTP: Directory content details read for {0}", remotePath);
 
             return res;
         }
@@ -264,6 +302,8 @@ namespace Sun.Core.Ftp
         /// <returns></returns>
         public List<string> GetSubDirectories(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Getting sub-directories for {0}", remotePath);
+
             var res = new List<string>();
 
             // Load the content of the given directory from the server
@@ -284,10 +324,15 @@ namespace Sun.Core.Ftp
                     // The last metadata info is the name of the sub-object
                     var directoryName = splitted[splitted.Length - 1];
                     if (!DIRECTORY_INGORE_LIST.Contains(directoryName)
-                            && !DIRECTORY_INGORE_LIST.Any(s => directoryName.EndsWith(string.Format("/{0}", s))))
-                    res.Add(directoryName);
+                        && !DIRECTORY_INGORE_LIST.Any(s => directoryName.EndsWith(string.Format("/{0}", s))))
+                    {
+                        res.Add(directoryName);
+                        CoreTools.Logger.DebugFormat("FTP: Found sub directory {0}", directoryName);
+                    }
                 }
             }
+
+            CoreTools.Logger.InfoFormat("FTP: Sub-Directories for {0} read from server", remotePath);
 
             return res;
         }
@@ -299,6 +344,8 @@ namespace Sun.Core.Ftp
         /// <returns></returns>
         public List<string> GetSubFiles(string remotePath)
         {
+            CoreTools.Logger.DebugFormat("FTP: Getting sub-files for {0}", remotePath);
+
             var res = new List<string>();
 
             // Load the content of the given directory from the server
@@ -319,8 +366,11 @@ namespace Sun.Core.Ftp
                     // The last metadata info is the name of the sub-object
                     var fileName = splitted[splitted.Length - 1];
                     res.Add(fileName);
+                    CoreTools.Logger.DebugFormat("FTP: Found sub file {0}", fileName);
                 }
             }
+
+            CoreTools.Logger.InfoFormat("FTP: sub-files for {0} read from server", remotePath);
 
             return res;
         }
