@@ -17,6 +17,8 @@ namespace Sun.Plasma.ViewModel.Commands
 
         public bool CanExecute(object parameter)
         {
+            // If Star Citizen is installed, there should be
+            // a registry entry located in CurrentUser
             var key = Registry.CurrentUser.OpenSubKey("Software\\Cloud Imperium Games\\StarCitizen");
             return key != null && key.GetValue("DisplayIcon") != null;
         }
@@ -25,6 +27,8 @@ namespace Sun.Plasma.ViewModel.Commands
 
         public void Execute(object parameter)
         {
+            // Read the path of where Star Citizen is installed
+            // on the system and launch the binary
             var key = Registry.CurrentUser.OpenSubKey("Software\\Cloud Imperium Games\\StarCitizen");
             Process.Start(key.GetValue("DisplayIcon").ToString());
         }

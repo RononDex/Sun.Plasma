@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,10 @@ namespace Sun.Plasma.ViewModel.Commands
     {
         public bool CanExecute(object parameter)
         {
-            //TODO: Check if Mumble is installed
-            return true;
+            // If mumble is installed, there should be the "Mumble Url"
+            // registered in the Windows Registry (ClassesRoot)
+            var key = Registry.ClassesRoot.OpenSubKey("mumble");
+            return key != null;
         }
 
         public event EventHandler CanExecuteChanged;

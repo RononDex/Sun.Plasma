@@ -204,6 +204,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                     <TextBlock TextDecorations="Underline" Foreground="{TemplateBinding Foreground}" FontSize="12" Text="{TemplateBinding Content}"/>
                 </ControlTemplate>
             </Setter.Value>
