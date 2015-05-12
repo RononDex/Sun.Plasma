@@ -15,6 +15,7 @@ New stuff:
  - Star Citizen can now be launched directly from Sun.Plasma
  - Made applications compatible with Windows 10 (untested)
  - Added buttons to launch mumble and star citizen from the tray icon
+ - More stuff gets logged into the logfile now, for easier bugfixing
  
  Projects to publish:
   - Sun.Plasma
