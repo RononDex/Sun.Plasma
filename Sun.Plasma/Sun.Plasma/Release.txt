@@ -25,3 +25,4 @@ New stuff:
   Added files:
   - Sun.Plasma:
     - Sun.StartAsAdmin.exe
+	- Sun.Plasma.Controller.dll
