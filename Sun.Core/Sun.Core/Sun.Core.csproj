@@ -73,8 +73,6 @@
     <Compile Include="Feeds\RssNewsFeedReader.cs" />
     <Compile Include="Security\SecureStorage.cs" />
     <Compile Include="Security\SecureStringUtility.cs" />
-    <Compile Include="Security\User.cs" />
-    <Compile Include="Security\UserProvider.cs" />
     <Compile Include="SelfUpdating\Application.cs" />
     <Compile Include="SelfUpdating\SelfUpdater.cs" />
     <Compile Include="Wpf\IWpfCachableControl.cs" />

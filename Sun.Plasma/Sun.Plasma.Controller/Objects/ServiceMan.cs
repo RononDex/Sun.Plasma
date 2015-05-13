@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Sun.Core.Security
+namespace Sun.Plasma.Controller.Objects
 {
-    public class UserProvider
+    class ServiceMan
     {
     }
 }
