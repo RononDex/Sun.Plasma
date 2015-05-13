@@ -1,6 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using System.Configuration;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +24,9 @@ namespace Sun.Plasma.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            // TODO: Launch Mumble
+            // TODO: Add current user
             // http://wiki.mumble.info/wiki/Mumble_URL
+            Process.Start(string.Format("mumble://{0}/?version=1.2.0", ConfigurationManager.AppSettings["MumbleServer"]));
         }
     }
 }
