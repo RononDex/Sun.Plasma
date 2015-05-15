@@ -22,8 +22,10 @@ namespace Sun.Plasma.ViewModel.Commands
             var window = Application.Current.Windows.OfType<Window>().Where(x => x.IsActive).FirstOrDefault();
             if (window.GetType().ToString().ToLower().Contains("login"))
                 Application.Current.Shutdown();
-            
-            window.Hide();
+            if (window.GetType().ToString().ToLower().Contains("settings"))
+                window.Close();
+            else
+                window.Hide();
         }
     }
 }

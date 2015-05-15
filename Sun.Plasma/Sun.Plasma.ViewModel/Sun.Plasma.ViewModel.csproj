@@ -71,6 +71,7 @@
     <Compile Include="Commands\LaunchMumbleCommand.cs" />
     <Compile Include="Commands\LaunchStarCitizenCommand.cs" />
     <Compile Include="Commands\MinimizeCommand.cs" />
+    <Compile Include="Commands\OpenSettingsCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="ViewModelCheckForUpdates.cs" />

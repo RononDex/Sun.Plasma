@@ -65,7 +65,7 @@
                 <Image Source="{StaticResource SettingsIcon}" Width="14" Height="14" />
             </Setter.Value>
         </Setter>
-        <!--<Setter Property="Command" Value="{Binding MinimizeCommand}" />-->
+        <Setter Property="Command" Value="{Binding OpenSettingsCommand}" />
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Button.Content">

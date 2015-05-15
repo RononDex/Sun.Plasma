@@ -30,7 +30,7 @@ namespace Sun.Plasma
             this.Loaded += OnLoaded;
             InitializeComponent();
 
-            this.DataContext = new Sun.Plasma.ViewModel.ViewModelMain();
+            this.DataContext = new Sun.Plasma.ViewModel.ViewModelMain() { SettingsWindow = new Settings()};
             Application.Current.MainWindow = this;
 
             // Show news feed by default

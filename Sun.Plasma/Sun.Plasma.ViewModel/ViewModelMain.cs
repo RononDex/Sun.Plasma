@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Input;
 using System.Reflection;
+using Sun.Plasma.ViewModel.Commands;
 
 namespace Sun.Plasma.ViewModel
 {
@@ -16,30 +18,37 @@ namespace Sun.Plasma.ViewModel
 
         public ICommand CloseCommand
         {
-            get { return new Commands.CloseCommand(); }
+            get { return new CloseCommand(); }
         }
 
         public ICommand MinimizeCommand
         {
-            get { return new Commands.MinimizeCommand(); }
+            get { return new MinimizeCommand(); }
         }
 
         public ICommand ExitCommand
         {
-            get { return new Commands.ExitCommand(); }
+            get { return new ExitCommand(); }
         }
 
         public ICommand LaunchStarCitizenCommand
         {
-            get { return new Commands.LaunchStarCitizenCommand(); }
+            get { return new LaunchStarCitizenCommand(); }
         }
 
         public ICommand LaunchMumbleCommand
         {
-            get { return new Commands.LaunchMumbleCommand() ; }
+            get { return new LaunchMumbleCommand() ; }
+        }
+
+        public ICommand OpenSettingsCommand
+        {
+            get { return new OpenSettingsCommand(SettingsWindow); }
         }
 
         #endregion
+
+        public Window SettingsWindow { get; set; }
 
         /// <summary>
         /// The version of the running application

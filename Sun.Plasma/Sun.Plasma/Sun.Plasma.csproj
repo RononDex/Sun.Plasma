@@ -122,6 +122,9 @@
     </Compile>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="ResizableWindow.cs" />
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SingleInstance.cs" />
     <Compile Include="PlasmaTools.cs" />
     <Compile Include="UpdateSelfUpdater.xaml.cs">
@@ -219,6 +222,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Styles\WindowStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

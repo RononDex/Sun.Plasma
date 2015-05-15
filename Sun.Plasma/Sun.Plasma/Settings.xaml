@@ -1,0 +1,8 @@
+﻿<Window x:Class="Sun.Plasma.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="364" Width="647" Style="{StaticResource  WindowCloseButton}">
+    <DockPanel LastChildFill="True">
+        <GroupBox></GroupBox>
+    </DockPanel>
+</Window>

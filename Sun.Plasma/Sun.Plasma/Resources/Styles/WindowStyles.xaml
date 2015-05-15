@@ -87,7 +87,7 @@
     </Style>
 
     <!-- Default Window stlye with only the "close button" -->
-    <Style TargetType="Window" x:Key="WindowCloseButton"  BasedOn="{StaticResource WindowBaseStyle}">
+    <Style TargetType="Window" x:Key="WindowCloseButton" BasedOn="{StaticResource WindowBaseStyle}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
@@ -112,7 +112,8 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="20" SharedSizeGroup="test" />
                                         </Grid.ColumnDefinitions>
-
+                                        
+                                        <Label Style="{StaticResource SmallTitle}" FontSize="11" Content="{TemplateBinding Title}" />
                                         <Button Name="BtnClose"  Grid.Column="1" VerticalAlignment="Top" Style="{StaticResource CloseButton}" BorderThickness="0" />
                                     </Grid>
                                     <ContentPresenter Margin="10 0 20 10" RecognizesAccessKey="True" />
