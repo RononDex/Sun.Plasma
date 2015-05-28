@@ -27,6 +27,7 @@ namespace Sun.Plasma.ViewModel.Commands
 
         public void Execute(object parameter)
         {
+            SettingsWindow = Activator.CreateInstance(SettingsWindow.GetType()) as Window;
             SettingsWindow.ShowDialog();
         }
     }

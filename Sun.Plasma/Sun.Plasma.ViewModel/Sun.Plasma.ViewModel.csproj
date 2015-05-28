@@ -80,6 +80,7 @@
     <Compile Include="ViewModelMain.cs" />
     <Compile Include="ViewModelMyAccount.cs" />
     <Compile Include="ViewModelNews.cs" />
+    <Compile Include="ViewModelSettings.cs" />
     <Compile Include="ViewModelTools.cs" />
     <Compile Include="ViewModelUpdateSelfUpdater.cs" />
   </ItemGroup>
