@@ -64,7 +64,7 @@ namespace Sun.Plasma
             if ((bool)e.OldValue == true
                 && (bool)e.NewValue == false)
             {
-                ((PlasmaApp)PlasmaApp.Current).NotifyIcon.ShowBalloonTip(2000, "S.U.N. Plasma",
+                PlasmaTrayIcon.NotifyIcon.ShowBalloonTip(2000, "S.U.N. Plasma",
                     "The application now runs in the background. You can doubleclick this icon at any time to bring the window back up",
                     System.Windows.Forms.ToolTipIcon.None);
             }
